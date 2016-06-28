@@ -12,8 +12,8 @@ $(document).ready(function() {
 	// 	var element = fragment.select('svg');
 	// 	s.append(element);
 	// });
-	var str = "text/javascript";
-	console.log(str.length);
+	// var str = "text/javascript";
+	// console.log(str.length);
 
 	/* mobile nav*/
 	$('.menu-icon').click(function() {

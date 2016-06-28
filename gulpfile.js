@@ -108,6 +108,9 @@ gulp.task('copy', function() {
 	var fontCopy = gulp.src(src.working.fonts)
 		.pipe(gulp.dest(src.build.fonts));
 
+	var iconCopy = gulp.src('./favicon.ico')
+		.pipe(gulp.dest(src.build.html));
+
 	/*var jsonCopy = gulp.src('./*.json')
 		.pipe(gulp.dest(src.build.html));*/
 
