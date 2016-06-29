@@ -74,8 +74,6 @@ gulp.task('styles:reload', function(cb) {
 gulp.task('scripts', function() {
 	var files = [
 		'./node_modules/jquery/dist/jquery.js',
-		'./node_modules/snapsvg/dist/snap.svg-min.js',
-		'./node_modules/isotope-layout/dist/isotope.pkgd.min.js',
 		src.working.js
 	];
 
@@ -102,19 +100,13 @@ gulp.task('copy', function() {
 	var assetsCopy = gulp.src(src.working.assets)
 		.pipe(gulp.dest(src.build.assets));
 
-	var phpCopy = gulp.src('./email.php')
-		.pipe(gulp.dest(src.build.html));
-
 	var fontCopy = gulp.src(src.working.fonts)
 		.pipe(gulp.dest(src.build.fonts));
 
 	var iconCopy = gulp.src('./favicon.ico')
 		.pipe(gulp.dest(src.build.html));
 
-	/*var jsonCopy = gulp.src('./*.json')
-		.pipe(gulp.dest(src.build.html));*/
-
-	return merge2(htmlCopy, assetsCopy, phpCopy, fontCopy);
+	return merge2(htmlCopy, assetsCopy, fontCopy);
 });
 
 gulp.task('copy:reload', function(cb) {

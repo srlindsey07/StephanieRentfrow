@@ -6,10 +6,10 @@
 }
 
 @mixin button() {
-	background-color: $yellow;
+	background-color: $turquoise;
 	color: #fff;
 	border: none;
-	text-shadow: 1px 1px $yellowDarker;
+	text-shadow: 1px 1px $turquoiseDark;
 	padding: 5px 15px 2px 15px;
 	text-align: center;
 	text-decoration: none;
@@ -20,7 +20,7 @@
 	&:hover {
 		color: #fff;
 		text-decoration: none;
-		background-color: $yellowHover;
+		background-color: $turquoiseDark;
 	}
 }
 
@@ -65,7 +65,7 @@ body {
 	margin: 0;
 	color: $mediumGrey;
 	font-family: 'Nexa Light', serif;
-	letter-spacing: .5px;
+	letter-spacing: .75px;
 	font-size: 14px;
 	line-height: 18px;
 }
@@ -91,6 +91,12 @@ a {
 	&:hover {
 		color: $turquoiseLight;
 		transition: color 200ms;
+	}
+
+	&.button {
+		@include button();
+		padding: 10px 20px;
+		font-size: 18px;
 	}
 }
 
@@ -139,7 +145,7 @@ textarea {
 }
 
 .row {
-	&:nth-child(odd){
+	&:nth-child(even){
 		background-color: $lightestGrey;
 	}
 }
@@ -284,6 +290,7 @@ header {
 
 .download {
 	@include round-button();
+	background: $yellow;
 	display: none;
 	position: fixed;
 	right: 30px;
@@ -302,6 +309,10 @@ header {
 	span {
 		display: block;
 		margin-left: 3px;
+	}
+
+	&:hover {
+		background: $yellowDarker;
 	}
 }
 
@@ -361,18 +372,17 @@ header {
 }
 
 .contact {
-	form {
+	.button-container {
+		text-align: center;
 		margin-top: 20px;
-		width: 50%;
-		margin: 0 auto;
 
-		button {
-			float: right;
-		}
+		a {
+			display: inline-block;
+			width: 80px;
 
-		.g-recaptcha {
-			margin-bottom: 15px;
-			float: right;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
 		}
 	}
 
@@ -519,8 +529,6 @@ header {
 
 .project {
 	&:nth-child(even) {
-		background-color: $lightestGrey;
-
 		.img-container {
 			float: right;
 			padding-right: 0;
