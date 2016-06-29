@@ -13,7 +13,7 @@ var src = {
 	working: {
 		scss: './scss/*.scss',
 		js: './js/*.js',
-		assets: './assets/*',
+		assets: ['./assets/*', '!./assets/*.psd'],
 		html: './*.html',
 		fonts: './fonts/**'
 	},
