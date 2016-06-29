@@ -351,23 +351,25 @@ header {
 }
 
 .about {
-	.profile-img {
-		width: 20%;
-		border-radius: 50%;
+	// .profile-img {
+	// 	width: 20%;
+	// 	border-radius: 50%;
+	// }
+	.quote {
+		font-size: 18px;
+		color: $darkerGrey;
+		line-height: 23px;
+		width: 33%;
+		display: inline-block;
+		margin-top: 13px;
 	}
 
 	.bio {
 		box-sizing: border-box;
-		width: 79%;
+		width: 66%;
 		display: inline-block;
 		padding-left: 30px;
-		vertical-align: top;
-
-		.quote {
-			font-size: 18px;
-			color: $darkerGrey;
-			line-height: 23px;
-		}
+		vertical-align: top;		
 	}
 }
 
