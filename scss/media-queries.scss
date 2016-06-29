@@ -9,10 +9,6 @@
 		padding: 20px;
 	}
 
-	.download {
-		display: none;
-	}
-
 	header {
 		padding: 10px 15px;
 
@@ -83,14 +79,12 @@
 	}
 
 	.about {
-		.profile-img {
-			width: 40%;
-			display: block;
-			margin: 0 auto;
+		.quote {
+			width: 100%;
 		}
 
 		.bio {
-			width: auto;
+			width: 100%;
 			padding: 0;
 		}
 	}
@@ -139,8 +133,10 @@
 	}
 
 	.contact {
-		form {
-			width: 100%;
+		a {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
 		}
 	}
 

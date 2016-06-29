@@ -27,10 +27,6 @@ $(document).ready(function() {
 			$('.download').fadeOut(200);
 		} 
 
-		else if ( width <= 767 ) {
-			$('.download').hide();
-		}
-
 		else {
 			$('.download').fadeIn(200);
 		}
