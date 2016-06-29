@@ -55,24 +55,6 @@
     }
 }
 
-@keyframes jiggle-arrow {
-    0% {
-        bottom: 5%;
-    }
-    50% {
-        bottom: 8%;
-    }
-}
-
-@keyframes jiggle-arrow-mobile {
-    0% {
-        bottom: 5%;
-    }
-    50% {
-        bottom: 8%;
-    }
-}
-
 body {
 	margin: 0;
 	color: $mediumGrey;
