@@ -299,17 +299,12 @@ header {
 	padding: 0;
 	animation: jiggle 500ms ease-in-out 2s 3;
 
-	.fa {
+	 span {
+		margin-top: 12px;
 		display: block;
-		font-size: 24px;
-		margin-left: 1px;
-		padding-top: 11px;
-	}
-
-	span {
-		display: block;
-		margin-left: 3px;
-	}
+		font-size: 13px;
+		line-height: 16px;
+	 }
 
 	&:hover {
 		background: $yellowDarker;
