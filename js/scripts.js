@@ -14,27 +14,7 @@ $(document).ready(function() {
 		$('.mobile-nav').removeClass('open');
 	});
 
-	$.fn.isOnScreen = function(){
-	    var element = this.get(0);
-	    var bounds = element.getBoundingClientRect();
-	    return bounds.top < window.innerHeight && bounds.bottom > 0;
-	}
-
-	$(window).scroll(function() {
-		var width = $(window).width();
-
-		if ( $('.hero').isOnScreen() && width > 767 ) {
-			$('.download').fadeOut(200);
-		} 
-
-		else {
-			$('.download').fadeIn(200);
-		}
-	});
-
-	$('.hero .arrow').click(function() {
-		$('html, body').animate({
-	        scrollTop: $("#synopsis").offset().top
-	    }, 1000);
+	$('.top').click(function() {
+		$('html, body').animate({ scrollTop: "0px" }, 1000);
 	});
 });

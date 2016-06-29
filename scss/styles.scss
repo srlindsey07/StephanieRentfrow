@@ -21,6 +21,7 @@
 		color: #fff;
 		text-decoration: none;
 		background-color: $turquoiseDark;
+		cursor: pointer;
 	}
 }
 
@@ -32,6 +33,17 @@
 	opacity: 0.9;
 	text-align: center;
 	text-shadow: none;
+	padding: 0;
+	background: $yellow;
+
+	&:hover {
+		background: $yellowDarker;
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 @keyframes jiggle {
@@ -264,39 +276,15 @@ header {
 		top: 30px;
 		right: 30px;
 	}
-
-	.arrow {
-		@include round-button();
-		position: absolute;
-		bottom: 5%;
-		left: calc(50% - 30px);
-		background-color: $turquoise;
-		color: #fff;
-		font-size: 60px;
-		cursor: pointer;
-		padding: 0;
-		animation: jiggle-arrow 500ms ease-in-out 1s 3;
-		
-		.fa {
-			line-height: 60px;
-		}
-
-		&:hover {
-			background-color: $turquoiseDark;
-			transition: background-color 200ms;
-		}
-	}
 }
 
 .download {
 	@include round-button();
-	background: $yellow;
 	display: none;
 	position: fixed;
 	right: 30px;
 	bottom: 40px;
 	z-index: 99;
-	padding: 0;
 	animation: jiggle 500ms ease-in-out 2s 3;
 
 	 span {
@@ -305,9 +293,21 @@ header {
 		font-size: 13px;
 		line-height: 16px;
 	 }
+}
 
-	&:hover {
-		background: $yellowDarker;
+.top {
+	@include round-button();
+	position: fixed;
+	right: 30px;
+	bottom: 40px;
+	line-height: 14px;
+	font-size: 16px;
+	display: none;
+
+	.fa {
+		display: block;
+		font-size: 28px;
+		margin-top: -10px;
 	}
 }
 
