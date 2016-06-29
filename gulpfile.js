@@ -106,7 +106,10 @@ gulp.task('copy', function() {
 	var iconCopy = gulp.src('./favicon.ico')
 		.pipe(gulp.dest(src.build.html));
 
-	return merge2(htmlCopy, assetsCopy, fontCopy);
+	var CNAMEcopy = gulp.src('./CNAME')
+		.pipe(gulp.dest(src.build.html));
+
+	return merge2(htmlCopy, assetsCopy, fontCopy, CNAMEcopy);
 });
 
 gulp.task('copy:reload', function(cb) {
